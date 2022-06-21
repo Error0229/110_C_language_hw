@@ -2,19 +2,19 @@
 #include<ctype.h>
 #include<stdlib.h>
 int todig(char *str,int *id){
-    int k = 0,fl=1;
-    if (str[*id]=='-'){
-        fl=-1;
-        (*id)++;
-    }
-    while(isdigit(str[*id])){
-        k=(k<<3)+(k<<1)+(str[(*id)++]-'0');
-    }
-    return k*fl;
+	int k = 0,fl=1;
+	if (str[*id]=='-'){
+		fl=-1;
+		(*id)++;
+	}
+	while(isdigit(str[*id])){
+		k=(k<<3)+(k<<1)+(str[(*id)++]-'0');
+	}
+	return k*fl;
 }
 int gcd(int a,int b){
-    if (a%b==0)return b;
-    else return gcd(b,a%b);
+	if (a%b==0)return b;
+	else return gcd(b,a%b);
 }
 int main(){
     int cnt=0,n;
